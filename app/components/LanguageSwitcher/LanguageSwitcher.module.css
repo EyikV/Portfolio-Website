@@ -1,0 +1,9 @@
+.languageSwitcher{
+    display: flex;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+.languageOption{
+font-weight: 600;
+}
