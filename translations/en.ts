@@ -8,9 +8,29 @@ export const en = {
         title: "I'm ",
         paragraphs: [
             "I’m a web developer with a non-traditional background, combining hands-on industry experience with a strong focus on modern web technologies.",
-            "After co-founding and running a construction company, I began building digital solutions to improve workflows—this is where my passion for development started. Since then, I’ve been working with technologies like Next.js, React, and TypeScript, creating websites and internal tools for real-world use.",
-            "I’m especially interested in writing clean, maintainable code and continuously improving through self-driven learning. My goal is to grow as a developer and contribute to meaningful, high-quality software projects.",
+            "I’ve always been drawn to art, design, and the small details that make something feel special, which naturally shapes the way I build websites and digital products. I enjoy creating experiences that look clean, modern, and memorable, while making sure they stay fast, responsive, and easy to use.",
+            "With a strong technical foundation, I’m able to turn creative ideas into polished products that not only look great but perform smoothly in the real world.",
         ],
+        button: "Contact me!",
+    },
+    projects: {
+        title: "Past projects:",
+        paragraphs: ["Check out some of the projects I've worked on in the past."],
+    },
+    contact: {
+        title: "Contact me",
+        paragraphs: ["If you would like to hire me for your project, fill in the form below, or send me an email at info@erikvas.com"],
+        form: {
+            name: "Name",
+            email: "E-Mail",
+            subject: "Subject",
+            message: "Message",
+            button: "Send",
+            status: "Sending...",
+            error: "Something went wrong.",
+            success: "Message sent successfully.",
+            networkError: "Network error. Please try again.",
+        },
     },
     footer: {
         rights: "All rights reserved",

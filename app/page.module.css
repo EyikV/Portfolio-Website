@@ -12,22 +12,26 @@
     width: 100%;
     background-color: transparent;
     opacity: 0.2;
-    background-image: radial-gradient(var(--tertiary) 1.75px, transparent 1.75px), radial-gradient(var(--tertiary) 1.75px, transparent 1.75px);
-    background-size: 70px 70px;
-    background-position:
-        0 0,
-        35px 35px;
+    background-image: repeating-linear-gradient(45deg, #b2ffa9 0, #b2ffa9 2px, transparent 0, transparent 50%);
+    background-size: 34px 34px;
+    background-color: #0d1b1e;
 }
 
+.custom-pattern {
+}
 .page > * {
     width: 100%;
     max-width: 1200px;
 }
 
 .header {
-    padding: 6rem 0rem;
+    position: relative;
+    background-color: var(--tertiary);
+    margin: 2rem 0;
+    padding: 1rem 2rem;
     display: flex;
     align-items: center;
+    border-radius: 100px;
 }
 
 .branding {
@@ -41,7 +45,7 @@
 }
 
 .name {
-    color: white;
+    color: var(--primary);
     font-size: 2rem;
     font-weight: 700;
 }
@@ -56,13 +60,13 @@
     position: relative;
     flex: 1;
     border-radius: 15px;
-    color: var(--secondary);
+    color: var(--primary);
     transition: transform 200ms;
     font-weight: 400;
     letter-spacing: 3px;
     padding: 1rem;
 }
-.links>li:hover{
+.links > li:hover {
     transform: scale(1.1);
 }
 .links > li > a {
@@ -87,10 +91,94 @@
     min-width: 100%;
     padding: 2rem;
     position: relative;
-    backdrop-filter: blur(15px);
     border-radius: 15px;
+    backdrop-filter: blur(15px);
 
+    border-top: 1px solid rgba(223, 221, 203, 0.185);
+    border-left: 1px solid rgba(223, 221, 203, 0.185);
+
+    border-bottom: 1px solid rgba(90, 90, 90, 0.349);
+    border-right: 1px solid rgba(90, 90, 90, 0.349);
 }
 
-.about {
+.texts {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.about > h1,
+.projects > h1,
+.contact > h1 {
+    margin-bottom: 2rem;
+}
+
+.about button {
+    margin-top: 2rem;
+    background-color: var(--tertiary);
+    color: var(--primary);
+    transition:
+        background-color 0.2s,
+        color 0.5s;
+}
+
+.about button::after,
+.about button::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), transparent, var(--secondary));
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 15px;
+    animation: 3s spin linear infinite;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
+.about button::before {
+    filter: blur(10px);
+    opacity: 0.2;
+}
+
+.about button:hover {
+    background-color: var(--primary);
+    color: var(--tertiary);
+}
+
+.about button:hover::before,
+.about button:hover::after {
+}
+
+.cardList {
+    padding: 2rem 0;
+    display: flex;
+    gap: 3rem;
+    justify-content: space-between;
+}
+
+.card {
+    border-radius: 20px;
+    width: 300px;
+    height: 500px;
+    background: transparent;
+
+    box-shadow: 0 0 5px rgba(139, 139, 139, 0.075);
+
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
 }
