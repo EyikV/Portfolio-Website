@@ -15,7 +15,7 @@ export const en = {
     hero: {
         eyebrow: "Frontend developer and creative builder",
         availability: "Available for freelance and in-house opportunities",
-        intro: "Design-minded websites with strong structure, smooth interactions, and a sharp visual point of view.",
+        intro: "I craft websites with strong structure, smooth interactions, and a sharp design sensibility.",
         primaryCta: "Start a project",
         secondaryCta: "View work",
         location: "Based in Germany, building for teams everywhere",

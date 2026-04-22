@@ -17,7 +17,7 @@ export const de: TranslationSchema = {
     hero: {
         eyebrow: "Frontend-Entwickler und kreativer Builder",
         availability: "Verfügbar für Freelance- und Inhouse-Projekte",
-        intro: "Designorientierte Websites mit klarer Struktur, flüssigen Interaktionen und einer markanten visuellen Handschrift.",
+        intro: "Ich gestalte Websites mit klarer Struktur, flüssigen Interaktionen und einem ausgeprägten Gespür für Design.",
         primaryCta: "Projekt starten",
         secondaryCta: "Arbeiten ansehen",
         location: "In Deutschland ansässig, für Teams überall im Einsatz",
