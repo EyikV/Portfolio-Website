@@ -1,9 +1,34 @@
-.languageSwitcher{
-    display: flex;
-    padding: 1rem;
-    gap: 2rem;
+.languageSwitcher {
+    display: inline-flex;
+    gap: 8px;
+    padding: 6px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.languageOption{
-font-weight: 600;
+.languageOption {
+    min-width: 48px;
+    min-height: 40px;
+    padding: 0 14px;
+    border-radius: 10px;
+    background: transparent;
+    color: rgba(243, 239, 232, 0.7);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    transition:
+        background-color 160ms ease,
+        color 160ms ease,
+        transform 160ms ease;
+}
+
+.languageOption:hover {
+    transform: translateY(-1px);
+    color: #fff8f0;
+}
+
+.active {
+    background: linear-gradient(135deg, rgba(255, 159, 90, 0.9), rgba(255, 208, 170, 0.9));
+    color: #10131d;
 }

@@ -1,0 +1,134 @@
+.form {
+    display: grid;
+    gap: 14px;
+    padding: 18px;
+}
+
+.fieldGroup {
+    display: grid;
+    gap: 8px;
+}
+
+.fieldError {
+    color: #ffb3b3;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.fieldHintRow {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.fieldHint {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+}
+
+.characterCount {
+    color: var(--text-muted);
+    font-size: 0.82rem;
+}
+
+.invalidField {
+    border-color: rgba(255, 120, 120, 0.55);
+    background: rgba(255, 120, 120, 0.06);
+}
+
+.submitButton {
+    --magnetic-x: 0px;
+    --magnetic-y: 0px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 56px;
+    padding: 0 18px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--accent) 0%, #ffd0aa 100%);
+    color: #141823;
+    font-weight: 700;
+    transform: translate3d(var(--magnetic-x), var(--magnetic-y), 0);
+    transition:
+        transform 180ms ease,
+        filter 180ms ease,
+        opacity 180ms ease;
+}
+
+.submitButton:hover {
+    filter: brightness(1.03);
+}
+
+.submitButton:disabled {
+    cursor: wait;
+    opacity: 0.85;
+}
+
+.spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(20, 24, 35, 0.24);
+    border-top-color: #141823;
+    border-radius: 999px;
+    animation: spin 700ms linear infinite;
+}
+
+.statusError,
+.statusSuccess {
+    display: grid;
+    gap: 6px;
+    padding: 14px 16px;
+    border-radius: 10px;
+    border: 1px solid;
+}
+
+.statusError {
+    background: rgba(255, 120, 120, 0.08);
+    border-color: rgba(255, 120, 120, 0.22);
+}
+
+.statusSuccess {
+    background: rgba(91, 194, 166, 0.1);
+    border-color: rgba(91, 194, 166, 0.24);
+    animation: successRise 360ms ease;
+}
+
+.statusTitle {
+    font-family: var(--font-montserrat);
+    font-size: 0.96rem;
+    color: var(--text-primary);
+}
+
+.statusText {
+    color: var(--text-secondary);
+}
+
+.dismissButton {
+    width: fit-content;
+    min-height: 42px;
+    padding: 0 16px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text-primary);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes successRise {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

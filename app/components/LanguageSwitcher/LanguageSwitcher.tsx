@@ -7,9 +7,21 @@ export default function LanguageSwitcher() {
     const { language, setLanguage } = useLanguage();
 
     return (
-        <div className={styles.languageSwitcher}>
-            <span className={styles.languageOption} onClick={(e) => setLanguage("en")}>EN</span>
-            <span className={styles.languageOption} onClick={(e) => setLanguage("de")}>DE</span>
+        <div className={styles.languageSwitcher} aria-label="Language switcher">
+            <button
+                type="button"
+                className={`${styles.languageOption} ${language === "en" ? styles.active : ""}`}
+                onClick={() => setLanguage("en")}
+            >
+                EN
+            </button>
+            <button
+                type="button"
+                className={`${styles.languageOption} ${language === "de" ? styles.active : ""}`}
+                onClick={() => setLanguage("de")}
+            >
+                DE
+            </button>
         </div>
     );
 }
